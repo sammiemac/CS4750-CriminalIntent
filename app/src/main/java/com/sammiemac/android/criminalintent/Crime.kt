@@ -1,9 +1,11 @@
 package com.sammiemac.android.criminalintent
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.*
 
-// Listing 8.1: Adding the Crime data class
-data class Crime(val id: UUID = UUID.randomUUID(),
+@Entity
+data class Crime(@PrimaryKey val id: UUID = UUID.randomUUID(),
                  var title: String = " ",
                  var date: Date = Date(),
                  var isSolved: Boolean = false)
